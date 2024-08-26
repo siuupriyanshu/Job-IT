@@ -1,3 +1,4 @@
+import { ThemeProvider } from "@/components/theme-provider"
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import AppLayout from "./layouts/app-layout"
@@ -46,7 +47,9 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <RouterProvider router={router}/>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+       <RouterProvider router={router}/>
+    </ThemeProvider>
   )
 }
 
