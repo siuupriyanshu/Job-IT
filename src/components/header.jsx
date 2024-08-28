@@ -15,13 +15,15 @@ const Header = () => {
       <Link to="/">
        <img src="/logo.png" className='h-20'/>
       </Link>
-       {/* <Button variant="outline">Login</Button> */}
-       <SignedOut>
-        <SignInButton />
+     <div className='flex gap-8'>
+     <SignedOut>
+        <Button variant="outline">Login</Button>
       </SignedOut>
       <SignedIn>
         <UserButton />
       </SignedIn>
+     </div>
+       
     </nav>
     </>
   )
