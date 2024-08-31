@@ -6,7 +6,7 @@ import ProtectedRoute from "./components/protected-route";
 import LandingPage from "./pages/landing";
 import OnBoarding from "./pages/onboarding";
 import JobPage from "./pages/job";
-import JobListing from "./pages/job-listing";
+import JobListing from "./pages/jobListing";
 import SavedJobs from "./pages/saved-job";
 import MyJobs from "./pages/my-jobs";
 import PostJob from "./pages/post-job";
