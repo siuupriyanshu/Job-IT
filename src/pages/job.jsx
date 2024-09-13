@@ -7,6 +7,7 @@ import { Briefcase, DoorClosed, DoorOpen, MapPinIcon } from 'lucide-react';
 import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import { BarLoader } from 'react-spinners'
+import {ApplyJobDrawer} from '@/components/applyjob';
 
 const JobPage = () => {
 
@@ -94,7 +95,14 @@ const JobPage = () => {
         className="bg-transparent sm:text-lg" // add global ul styles - tutorial
       />
 
-
+     { job?.recruiter_id !== user?.id && (
+      <ApplyJobDrawer
+        job={job}
+        user= {user}
+        fetchJob={fnJob}
+        applied= {job?.applications?.find((ap) => ap.candidate_id === user.id)}
+      />
+     )}
 
     </div>
   )
